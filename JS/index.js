@@ -11,7 +11,7 @@ function convertToHex() {
 
   // Check if the values are valid
   if (isNaN(red) || isNaN(green) || isNaN(blue)) {
-    alert('Please enter valid numerical values for RGB components.');
+    alert('Please enter valid values for RGB.');
     return;
   }
 
