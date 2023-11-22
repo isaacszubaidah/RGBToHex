@@ -1,5 +1,5 @@
 // event listener for button
-document.getElementById('convertButton').addEventListener('click', function() {
+document.getElementById('convertToHex').addEventListener('click', function() {
   convertToHex();
 });
 
