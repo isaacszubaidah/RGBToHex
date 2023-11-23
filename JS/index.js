@@ -5,9 +5,9 @@ document.getElementById('convertToHex').addEventListener('click', function() {
 
 function convertToHex() {
  
-  const red = parseInt(document.getElementById('red').value);
-  const green = parseInt(document.getElementById('green').value);
-  const blue = parseInt(document.getElementById('blue').value);
+ let red = parseInt(document.getElementById('red').value);
+ let green = parseInt(document.getElementById('green').value);
+ let blue = parseInt(document.getElementById('blue').value);
 
   // Check if the values are valid
   if (isNaN(red) || isNaN(green) || isNaN(blue)) {
@@ -16,7 +16,7 @@ function convertToHex() {
   }
 
   // RGB to Hex conversion function
-  const hexColor = rgbToHex(red, green, blue);
+  let hexColor = rgbToHex(red, green, blue);
 
   // the result
   document.getElementById('result').innerText = `Hex Color: ${hexColor}`;
@@ -32,12 +32,12 @@ function rgbToHex(r, g, b) {
   b = Math.min(255, Math.max(0, b));
 
   // Convert each component to a two-digit hexadecimal value
-  const hexR = r.toString(16).padStart(2, '0');
-  const hexG = g.toString(16).padStart(2, '0');
-  const hexB = b.toString(16).padStart(2, '0');
+  let hexR = r.toString(16).padStart(2, '0');
+  let hexG = g.toString(16).padStart(2, '0');
+  let hexB = b.toString(16).padStart(2, '0');
 
   // grouping the values together so it can show the actual hex
-  const hexColor = `#${hexR}${hexG}${hexB}`;
+  let hexColor = `#${hexR}${hexG}${hexB}`;
   // Convert it to uppercase to keep it general
   return hexColor.toUpperCase();
 }
